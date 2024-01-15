@@ -1,0 +1,19 @@
+[gd_scene load_steps=4 format=3 uid="uid://1rqe7e8cb5s"]
+
+[ext_resource type="Script" path="res://mob scenes/birb.gd" id="1_443yu"]
+[ext_resource type="Texture2D" uid="uid://cdpcatk0jn4y5" path="res://images/birb.png" id="1_cxjod"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_p23js"]
+radius = 243.0
+height = 498.0
+
+[node name="Area2D" type="Area2D"]
+scale = Vector2(0.25, 0.25)
+script = ExtResource("1_443yu")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_cxjod")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-4, 5)
+shape = SubResource("CapsuleShape2D_p23js")
